@@ -1,0 +1,36 @@
+1. Model domain, elevation data and source
+a.	You need to put the data in a text file with 6 columns
+  i.	Column 1 = name of area
+  ii.	Column 2 = name of parent area
+  iii.	Column 3 = linear/non linear (1/0)
+  iv.	Column 4 = name of .grd for bathy/topo in that area
+  v.	Column 5 = crustal displacement file name (this will be the source which needs to be on the sma resolution as the topo in that area, thus the source will need to be resampled multiple times to each area…)
+  vi.	Column 6 = wetordry name (this is if there is any topography which is below 0m elevation which you want to enforce as dry at the beginning of the simulation … this will require careful checking of topography along coastlines…)
+b.	The data needs to be in .grd format (specifically in cf format – which is an old and unsupported format that can be created in GMT – BE CAREFUL THIS IS NOT THE DEFAULT IN GMT)
+c.	The source as mentioned needs to be on the same scale as the topo/bathy data so when you create a source you will need to nest it as you will the bathy and resample so that the resolutions correspond. Note that +ve is uplift and –ve is subsidence, this is in metres
+d.	If you have below sea level topo you want to be dry at the beginning of the simulation you will need to section this out in its own terrain file 
+
+2. Output points/tide gauges:
+a.	This  is where the waveform data is output
+b.	You need to have a text file which has 3 columns and 1 header line
+  i.	Header line = total number of stations (as a numeral e.g. 7)
+  ii.	Column 1 = latitude in decimal degrees
+  iii.	Column 2 = longitude in decimal degrees
+  iv.	Column 3 = station number 
+c.	Note that data will be output at the grid point/node that is closest to the coordinates given (the finer the resolution around the tide gauge the closer it will be to the exact coordinates that you input)
+
+3.Model Parameters:
+a.	Need to edit the tsun.par file
+  i.	DO NOT DELETE the ‘&params” at the beginning of the file
+  ii.	Gridfile = name of the .dat file which defines the nesting of topo/bathy and source information
+  iii.	maxgrdfn = the name of the output file with the maximum wave height information for the model domain
+  iv.	vmasgrdfn = name of the output file with the maximum velocity information for the model domain
+  v.	tgstafn = name of the .txt input file with the tide gauge coordinates in it
+  vi.	dt = length of time step (in seconds) (keep this suitably small – relative to water depth and grid resolution – default is 0.05 can leave as is probably)
+  vii.	tend = simulation time in seconds)
+  viii.	tau = time before the EQ occurs in the simulation
+  ix.	cf = friction coefficient for sea floor. Use a negative value to make it mannings coefficient
+  x.	cfl = friction on land. Use a negative value to make it mannings coefficient
+  xi.	coriolis = yes or no (1 or 0) use if it is a far field tsunami
+  xii.	cp2_all (leave as 1)
+
