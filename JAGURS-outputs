@@ -1,0 +1,18 @@
+1.	TGS files
+  a.	One file for each tide gauge station
+  b.	Space delimited text files (can be opened in excel)
+  c.	Waveform data at each time step (water height, x velocity and y velocity) (units???)
+2.	SD01.00001200.grd etc
+  a.	These are GMT gridfiles that have water heights and velocities at snapshots in time (as opposed to the maximum height or max velocity)
+  b.	They are made for each domain and unit of time passed (you can change specifics of this in the tsun.par file)
+3.	SD01.initl_disp.grd etc etc
+  a.	These are GMT grid files that show the initial water level for each domain was the earthquake has occurred
+  b.	Good for checking your source etc
+4.	SD01.zmax.grd etc
+  a.	These are GMT gridfiles
+  b.	One is created for each domain
+  c.	Has the maximum water height for the simulations (presumably in metres)
+5.	SD01.vmax.grd etc
+  a.	These are GMT gridfiles
+  b.	One is created for each domain
+  c.	Has the maximum velocity reached for the simulations (presumably in m/s)
