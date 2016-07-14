@@ -1,0 +1,7 @@
+In Serial on the NCI:
+1.	Create a directory for your model outputs
+2.	Create a directory for your model inputs and put data in there
+3.	Copy run_model.sh into the new directory 
+4.	Make necessary changes to run_model.sh (file names and compute requirements)
+5.	>> qsub run_model.sh
+6.	The outputs and error file will be created in the directory you are in
