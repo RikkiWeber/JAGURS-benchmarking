@@ -1,0 +1,4 @@
+Donggala_1 Donggala_1 1 bathy_D1.grd disp_D1.grd
+Donggala_2 Donggala_1 0 bathy_D2.grd disp_D2.grd
+Donggala_3 Donggala_2 0 bathy_D3.grd disp_D3.grd
+Donggala_4 Donggala_3 0 bathy_D4.grd disp_D4.grd 
