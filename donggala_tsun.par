@@ -2,7 +2,7 @@
 gridfile="gridfile.dat"
 maxgrdfn="zmax.grd"
 vmaxgrdfn="vmax.grd"
-tgstafn="test_tgs.txt"
+tgstafn="donggala_tgs.txt"
 dt=0.05
 tend=3600   
 itmap=1200
