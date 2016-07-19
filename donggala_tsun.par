@@ -1,5 +1,5 @@
 &params
-gridfile="donggala_gridfile.dat"
+gridfile="donggala_grid.dat"
 maxgrdfn="zmax.grd"
 vmaxgrdfn="vmax.grd"
 tgstafn="donggala_tgs.txt"
